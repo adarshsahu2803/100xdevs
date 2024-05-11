@@ -8,6 +8,19 @@ Hint - use Date class exposed in JS
 There is no automated test for this one, this is more for you to understand time goes up as computation goes up
 */
 
+// myScript.js
 function calculateTime(n) {
-    return 0.01;
+    let startTime = new Date();
+    let sm = 0;
+    for (let i = 1; i <= n; i++) {
+        sm += i;
+    }
+    let endTime = new Date();
+    console.log("Time taken to compute sum from 1 to", n + ":", endTime - startTime, "milliseconds");
 }
+
+// Parse command-line argument
+const n = parseInt(process.argv[2]);
+
+// Call the function with the provided input
+calculateTime(n);
