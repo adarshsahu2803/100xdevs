@@ -4,7 +4,8 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  let rev = str.split('').reverse().join('');
+  return str.toLowerCase() === rev.toLowerCase();
 }
 
 module.exports = isPalindrome;
